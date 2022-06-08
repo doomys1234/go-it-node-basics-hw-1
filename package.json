@@ -1,0 +1,26 @@
+{
+  "name": "go-it-node-basics-hw-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doomys1234/go-it-node-basics-hw-1.git"
+  },
+  "author": "Maksym Rudenko <doomys1234@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doomys1234/go-it-node-basics-hw-1/issues"
+  },
+  "homepage": "https://github.com/doomys1234/go-it-node-basics-hw-1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "yargs": "^17.5.1"
+  }
+}
