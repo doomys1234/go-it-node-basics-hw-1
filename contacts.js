@@ -3,37 +3,28 @@ const path = require("path");
 const contactsPath = path.resolve("./db/contacts.json");
 
 function listContacts() {
-    fs.readFile(contactsPath)
-    .then(data => console.log(data.toString()))
-    .then(error => console.log(error))
+  fs.readFile(contactsPath)
+    .then((data) => console.log(data.toString()))
+    .then((error) => console.log(error));
 }
-
 
 function getContactById(contactId) {
-
-    fs.readFile(contactsPath)
-        .then(data => {
-            const arr = JSON.parse(data)
-            return arr.filter(item=> parseInt(item.id)=== contactId)
+  fs.readFile(contactsPath)
+    .then((data) => {
+      const arr = JSON.parse(data);
+      return arr.filter((item) => parseInt(item.id) === contactId);
     })
-    .then(error => console.log(error))
-
+    .then((error) => console.log(error));
 }
-
-
 
 function removeContact(contactId) {
-
-     fs.readFile(contactsPath)
-        .then(data => {
-            const arr = JSON.parse(data)
-            return arr.filter(item=> parseInt(item.id)!== contactId)
+  fs.readFile(contactsPath)
+    .then((data) => {
+      const arr = JSON.parse(data);
+      return arr.filter((item) => parseInt(item.id) !== contactId);
     })
-    .then(error => console.log(error))
-
+    .then((error) => console.log(error));
 }
-
-
 
 function addContact(id, name, email, phone) {
   fs.readFile(contactsPath)
@@ -56,8 +47,8 @@ function addContact(id, name, email, phone) {
 }
 
 module.exports = {
-    listContacts,
-    getContactById,
-    removeContact,
-    addContact,
+  listContacts,
+  getContactById,
+  removeContact,
+  addContact,
 };
