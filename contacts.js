@@ -2,6 +2,8 @@ const fs = require("fs").promises;
 const path = require("path");
 const contactsPath = path.resolve("./db/contacts.json");
 
+const test = 0
+
 function listContacts() {
   fs.readFile(contactsPath)
     .then((data) => console.log(data.toString()))
