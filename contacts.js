@@ -1,7 +1,7 @@
 const fs = require("fs").promises;
 const path = require("path");
 const contactsPath = path.resolve("./db/contacts.json");
-const shortId = require("shortid")
+const shortid = require("shortid")
 
 const listContacts = async() => {
   const data = await fs.readFile(contactsPath)
@@ -33,7 +33,7 @@ const addContact = async(name, email, phone) =>{
   const data = await listContacts()
   const contacts = JSON.parse(data)
   const newItem = {
-        id: shortId(),
+        id: shortid(),
         name: name,
         email: email,
         phone: phone,
